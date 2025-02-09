@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            justify-content: center;
+            display: grid;
+            grid-template-rows: 75px auto 25px; /* Defines row heights */
+            grid-template-columns: 80% auto 25px;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+            height: 90vh;
+            padding: 10px;
+        }
+
+        header {
+            text-align: center;
+            background-color: teal;
+            grid-area: header;
+        }
+
+        main {
+            text-align: center;
+            background-color: #ccc;
+            grid-area: main;
+        }
+
+        footer {
+            text-align: center;
+            background-color: grey;
+            grid-area: footer;
+        }
+
+        @media (max-width: 480px) {
+
+            main {
+                font-size: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo modi libero expedita iure sequi exercitationem voluptate quis velit illum numquam. Non corporis blanditiis, accusantium ex commodi facere quos nemo quo?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo modi libero expedita iure sequi exercitationem voluptate quis velit illum numquam. Non corporis blanditiis, accusantium ex commodi facere quos nemo quo?</p>
+    
+    </main>
+    <footer>Footer</footer>
+</body>
+</html>
