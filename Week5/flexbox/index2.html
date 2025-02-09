@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center; /*  Kuvat keskellä näyttöä sivusuunnassa*/
+            align-items: center; /*  Kuvat keskellä näyttöä pystysuunnassa*/
+            min-height: 100vh; /*kuinka iso osa view height:sta käytetään */
+            background-color: teal;
+        }
+        .grid {
+            display: flex;
+            flex-direction: row; /* Default, rivi */
+            gap: 20px;
+            flex-wrap: nowrap; /* Default, ei jatku toiselle riville */
+        }
+        .grid img {
+            width: calc(25%); /*  Makes each image takes up 1/4 container width*/
+            object-fit: cover;  
+            /* Kuvan skaalaus: 
+
+            fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be STRETCHED or squished to fit
+            contain - The image keeps its aspect ratio, but is RESIZED to fit within the given dimension
+            cover - The image keeps its aspect ratio and fills the given dimension. The image will be CLIPPED to fit
+            scale-down - the image is scaled down to the SMALLEST VERSION of none or contain
+            none - The image is not resized
+
+               */
+            border-radius: 1%; /*pyöreät reuna*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <img src="./pictures/1.webp" alt="Image 1">
+        <img src="./pictures/2.webp" alt="Image 2">
+        <img src="./pictures/3.png" alt="Image 3">
+        <img src="./pictures/4.webp" alt="Image 4">
+    </div>
+</body>
+
+
+</html>
